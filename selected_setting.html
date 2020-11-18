@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>DomSmile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+  <body id="page_selected_setting">
+    <header class="header">
+      <div class="header-logo"><a href="/"><span class="pic"></span></a></div>
+      <div class="header-wrap">
+        <nav class="header-nav">
+          <ul>
+            <li><a href="about.html">О комплексе</a>
+              <ul>
+                <li><a href="#">Общаяя информация</a></li>
+                <li><a href="#">Планировочные решения</a></li>
+                <li><a href="#">Виды отделки</a></li>
+                <li><a href="#">Расположение</a></li>
+                <li><a href="#">Галерея</a></li>
+                <li><a href="management.html">Инфраструктура</a></li>
+                <li><a href="comerch_nedvizh.html">Коммерческие помещения</a></li>
+                <li><a href="progress_construct.html">Ход строительства</a></li>
+                <li><a href="management.html">Управляющая компания</a></li>
+                <li><a href="#">Документы</a></li>
+                <li><a href="question.html">Вопрос ответ</a></li>
+              </ul>
+            </li>
+            <li><a href="buy.html">Способ покупки</a></li>
+            <li><a href="news.html">Новости</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a class="active" href="selected_setting.html">Выбрать апартаменты</a></li>
+          </ul>
+        </nav>
+        <div class="header-contact"><b>+7 (495) 123 45 67</b><span class="feed_1">Заказать звонок</span></div>
+        <div class="header-burger">
+          <div class="icon-burger"></div>
+        </div>
+        <div class="header-favorite"><i class="icon-star-bg"></i><span>Избранное</span></div>
+      </div>
+    </header>
+    <div class="speedbar">
+      <div class="wrap"><a href="/">Главная</a><span class="icon-arrow-speedbar"></span>Выбрать апартаменты</div>
+    </div>
+    <div class="header-title">
+      <div class="wrap">
+        <h1 class="title">Выбрать апартаменты</h1>
+        <div class="header-btn"><a href="selected.html"><i class="icon-visual-selected"></i>Визуальный выбор</a><a class="active" href="selected2.html"><i class="icon-option-selected"></i>Выбор по параметрам</a></div>
+      </div>
+    </div>
+    <div class="box-width bgr">
+      <div class="wrap">
+        <form class="fx-col" action="" method="POST">
+          <div class="filter-box">
+            <div class="range-box">
+              <div class="range-box_header"><span>Площадь</span>
+                <div class="field-range">
+                  <input type="text" value="" id="filter_range_1"><span>-</span>
+                  <input type="text" value="" id="filter_range_1_2">
+                </div><span>м<sup>2</sup></span>
+              </div>
+              <div class="range-box_slider" id="range-box-slider_1"></div>
+            </div>
+            <div class="range-box">
+              <div class="range-box_header"><span>Стоимость</span>
+                <div class="field-range">
+                  <input type="text" value="" id="filter_range_2"><span>-</span>
+                  <input type="text" value="" id="filter_range_2_2">
+                </div><span>млн руб.</span>
+              </div>
+              <div class="range-box_slider" id="range-box-slider_2"></div>
+            </div>
+            <div class="range-box">
+              <div class="range-box_header"><span>Этаж</span>
+                <div class="field-range">
+                  <input type="text" value="" id="filter_range_3"><span>-</span>
+                  <input type="text" value="" id="filter_range_3_2">
+                </div>
+              </div>
+              <div class="range-box_slider" id="range-box-slider_3"></div>
+            </div>
+            <div class="button-box"><span>Секция</span>
+              <div class="fx-row">
+                <div class="button-box_select">
+                  <input type="checkbox" value="" id="section_a">
+                  <label for="section_a">А</label>
+                </div>
+                <div class="button-box_select">
+                  <input type="checkbox" value="" id="section_b">
+                  <label for="section_b">Б</label>
+                </div>
+              </div>
+            </div>
+            <div class="button-box"><span>Комнат</span>
+              <div class="fx-row">
+                <div class="button-box_select">
+                  <input type="checkbox" value="" id="room_c">
+                  <label for="room_c">С</label>
+                </div>
+                <div class="button-box_select">
+                  <input type="checkbox" value="" id="room_1">
+                  <label for="room_1">1</label>
+                </div>
+                <div class="button-box_select">
+                  <input type="checkbox" value="" id="room_2">
+                  <label for="room_2">2</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filter-box filter-box-left">
+            <div class="checked-box">
+              <div class="checked-box_select">
+                <input type="checkbox" value="" id="checkbox_1">
+                <label for="checkbox_1"></label>
+              </div><span>Без отделки</span>
+              <div class="circle-quest">?</div>
+            </div>
+            <div class="checked-box">
+              <div class="checked-box_select">
+                <input type="checkbox" value="" id="checkbox_2">
+                <label for="checkbox_2"></label>
+              </div><span>Предчистовая отделка</span>
+              <div class="circle-quest">?</div>
+            </div>
+            <div class="checked-box">
+              <div class="checked-box_select">
+                <input type="checkbox" value="" id="checkbox_3">
+                <label for="checkbox_3"></label>
+              </div><span>Полная отделка</span>
+              <div class="circle-quest">?</div>
+            </div>
+          </div>
+          <div class="filter-result">Найдено 124 варианта
+            <button type="reset" id="filter-reset">Сбросить фильтр</button>
+          </div>
+        </form>
+        <div class="box-sort"><span>Сортировка</span>
+          <div class="sort-list_active"><span>По цене</span><a class="icon-arrow-mini" href="#"></a>
+            <ul class="sort-list_active-box">
+              <li>По умолчанию</li>
+              <li>По цене</li>
+              <li>По площади</li>
+            </ul>
+          </div>
+          <div class="sort-option-box"><i class="icon-select-tab"></i></div>
+          <div class="sort-option-list sort-active"><i class="icon-list"></i></div>
+        </div>
+        <div class="box-table">
+          <div class="box-table_header">
+            <div>План</div>
+            <div>№</div>
+            <div>Секция</div>
+            <div>Этаж</div>
+            <div>Комнат</div>
+            <div>Площадь</div>
+            <div>Отделка</div>
+            <div>Цена</div>
+            <div></div>
+          </div><a href="#">
+            <div class="box-table-row box-table-tab">
+              <div><img src="img/table-plan.png" alt=""></div>
+              <div>А/8/39</div>
+              <div>А</div>
+              <div>8</div>
+              <div>1</div>
+              <div>27.2 м<sub>2</sub></div>
+              <div>Без отделки</div>
+              <div>2 120 000 Р</div>
+              <div><span class="icon-star-white"></span></div>
+            </div></a><a href="#">
+            <div class="box-table-row">
+              <div><img src="img/table-plan.png" alt=""></div>
+              <div>А/8/39</div>
+              <div>А</div>
+              <div>8</div>
+              <div>1</div>
+              <div>27.2 м<sub>2</sub></div>
+              <div>Без отделки</div>
+              <div>2 120 000 Р</div>
+              <div><span class="icon-star-white"></span></div>
+            </div></a>
+        </div>
+        <div class="box-center"><a class="btn-invisib" href="#">Показать еще</a></div>
+      </div>
+    </div>
+    <div class="wrap wrap-under">
+      <div class="social-network fx-col">
+        <div class="social-network_header">
+          <div class="header-left"><span>Нужна консультация?</span></div>
+          <div class="header-right">
+            <p class="descr">Отправляя форму, вы подтверждаете своё согласие на обработку персональных данных</p>
+          </div>
+        </div>
+        <form class="social-network_form" method="POST">
+          <input class="field" type="text" placeholder="Ваше имя">
+          <input class="field" type="text" placeholder="Телефон">
+          <button class="field-btn" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-menu">
+      <div class="popup-menu_header">
+        <div class="wrap">
+          <div class="popup-menu_logo"><a href="#"><span class="logo"></span></a></div>
+          <ul class="social-links smart-event">
+            <li><a href="#"><i class="facebook"></i></a></li>
+            <li><a href="#"><i class="instagram"></i></a></li>
+            <li><a href="#"><i class="youtube"></i></a></li>
+          </ul>
+          <div class="header-burger">
+            <div class="icon-close"></div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="popup-menu_btn"><a class="btn-red" href="#"></a><a class="btn-red" href="#"></a><a class="btn-red desktop-event" href="#"></a></div>
+        <div class="menu_footer">
+          <div class="fx-col-3">
+            <div class="menu_footer-sect"><a class="footer-sect-header" href="#">О комплексе</a>
+              <ul>
+                <li><a href="#">Общаяя информация</a></li>
+                <li><a href="#">Планировочные решиня</a></li>
+                <li><a href="#">Виды отделки</a></li>
+                <li><a href="#">Расположение</a></li>
+                <li><a href="#">Галерея</a></li>
+                <li><a href="#">Инфраструктура</a></li>
+                <li><a href="#">Коммерческие помещения</a></li>
+                <li><a href="#">Ход строительства</a></li>
+                <li><a href="#">Управляющая компания</a></li>
+                <li><a href="#">Документы</a></li>
+              </ul>
+            </div>
+            <div class="menu_footer-sect"><a class="footer-sect-header" href="#">Вопрос ответ</a></div>
+          </div>
+          <div class="fx-col-3">
+            <div class="menu_footer-sect"><a class="footer-sect-header" href="#">Выбрать апартаменты</a>
+              <ul>
+                <li><a href="#">Визуальный выбор</a></li>
+                <li><a href="#">Выбор фильтром</a></li>
+              </ul>
+            </div>
+            <div class="menu_footer-sect"><a class="footer-sect-header" href="#">Способ покупки</a>
+              <ul>
+                <li><a href="#">Ипотека</a></li>
+                <li><a href="#">Рассрочка</a></li>
+                <li><a href="#">Онлайн покупка</a></li>
+                <li><a href="#">Ипотечный калькулятор</a></li>
+                <li><a href="#">Заявка на ипотеку</a></li>
+              </ul>
+            </div>
+            <div class="menu_footer-sect"><a class="footer-sect-header" href="#">Новости</a>
+              <ul>
+                <li><a href="#">Новости комплекса</a></li>
+                <li><a href="#">Акции комплекса</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="fx-col-3">
+            <div class="menu_footer-sect"><a class="footer-sect-header" href="#">Контакты</a>
+              <div class="menu_footer-sect_info">
+                <div class="sect-info_header"><b>DOMSMILE</b></div>
+                <div class="sect-info_bottom">Московская область, город Мытищи,<br>улица Колпакова, микрорайон 17, корпус 23<strong>+7 (495) 123 45 67</strong><span class="btn-smile feed_1"><i class="icon-smile"></i>Заказать звонок</span></div>
+              </div>
+              <div class="menu_footer-sect_info">
+                <div class="sect-info_header"><b>Режим работы офиса продаж:</b></div>
+                <div class="sect-info_bottom">
+                  <ul>
+                    <li><strong>пн.-пт.</strong>9:00-21:00</li>
+                    <li><strong>сб.-вс.</strong>10:00-20:00</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-info"><span>+7 (495) 123 45 67</span>
+        <ul class="social-links">
+          <li><a href="#"><i class="facebook"></i></a></li>
+          <li><a href="#"><i class="instagram"></i></a></li>
+          <li><a href="#"><i class="youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="popup-feed" id="feed_1">
+      <div class="popup-feed_close"><i class="icon-close"></i></div>
+      <div class="popup-feed_wrap">
+        <div class="inner">
+          <div class="feed-header"><span>Оставить заявку</span><span>Наш менеджер свяжется с Вами!</span></div>
+          <form class="feed-form" action="">
+            <div class="feed-fieldset">
+              <input class="feed-text" type="text" placeholder="Ваше имя">
+              <input class="feed-text" type="text" placeholder="Телефон">
+            </div>
+            <div class="feed-btn">
+              <button type="submit">Отправить</button>
+            </div>
+            <div class="feed-foot">
+              <div class="feed-check">
+                <input type="checkbox" id="checked" checked>
+                <label for="checked"></label>
+              </div><span>Соглашение на обработку персональных данных</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup-feed" id="feed_2">
+      <div class="popup-feed_close"><i class="icon-close"></i></div>
+      <div class="popup-feed_wrap">
+        <div class="inner">
+          <div class="feed-header"><span>Забронировать</span><span>Наш менеджер свяжется с Вами!</span></div>
+          <form class="feed-form" action="">
+            <div class="feed-fieldset">
+              <input class="feed-text" type="text" placeholder="Ваше имя">
+              <input class="feed-text" type="text" placeholder="Телефон">
+            </div>
+            <div class="feed-btn">
+              <button type="submit">Отправить</button>
+            </div>
+            <div class="feed-foot">
+              <div class="feed-check">
+                <input type="checkbox" id="checked2" checked>
+                <label for="checked2"></label>
+              </div><span>Соглашение на обработку персональных данных</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer footer-smart">
+      <div class="fx-col">
+        <div class="footer-top">
+          <div class="wrap">
+            <div class="footer-top_logo"><a href="#"><img src="img/logo_foot.svg" alt=""></a>
+              <div class="desktop-event">
+                <ul class="social-links">
+                  <li><a href="#"><i class="facebook"></i></a></li>
+                  <li><a href="#"><i class="instagram"></i></a></li>
+                  <li><a href="#"><i class="youtube"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu_footer">
+              <div class="fx-col-3 smart-event">
+                <div class="menu_footer-sect"><a class="footer-sect-header" href="#">О комплексе</a>
+                  <ul>
+                    <li><a href="#">Общаяя информация</a></li>
+                    <li><a href="#">Планировочные решения</a></li>
+                    <li><a href="#">Виды отделки</a></li>
+                    <li><a href="#">Расположение</a></li>
+                    <li><a href="#">Галерея</a></li>
+                    <li><a href="management.html">Инфраструктура</a></li>
+                    <li><a href="comerch_nedvizh.html">Коммерческие помещения</a></li>
+                    <li><a href="progress_construct.html">Ход строительства</a></li>
+                    <li><a href="management.html">Управляющая компания</a></li>
+                    <li><a href="#">Документы</a></li>
+                  </ul>
+                </div>
+                <div class="menu_footer-sect"><a class="footer-sect-header" href="question.html">Вопрос ответ</a></div>
+              </div>
+              <div class="fx-col-3 smart-event">
+                <div class="menu_footer-sect"><a class="footer-sect-header" href="selected_setting.html">Выбрать апартаменты</a>
+                  <ul>
+                    <li><a href="#">Визуальный выбор</a></li>
+                    <li><a href="#">Выбор фильтром</a></li>
+                  </ul>
+                </div>
+                <div class="menu_footer-sect"><a class="footer-sect-header" href="#">Способ покупки</a>
+                  <ul>
+                    <li><a href="#">Ипотека</a></li>
+                    <li><a href="#">Рассрочка</a></li>
+                    <li><a href="#">Онлайн покупка</a></li>
+                    <li><a href="#">Ипотечный калькулятор</a></li>
+                    <li><a href="#">Заявка на ипотеку</a></li>
+                  </ul>
+                </div>
+                <div class="menu_footer-sect"><a class="footer-sect-header" href="news.html">Новости</a>
+                  <ul>
+                    <li><a href="news.html">Новости комплекса</a></li>
+                    <li><a href="#">Акции комплекса</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="fx-col-3 smart-event">
+                <div class="menu_footer-sect"><a class="footer-sect-header" href="contacts.html">Контакты</a>
+                  <div class="menu_footer-sect_info">
+                    <div class="sect-info_header"><b>Комплекс DOMSMILE</b></div>
+                    <div class="sect-info_bottom">Московская область, город Мытищи,<br>улица Колпакова, микрорайон 17, корпус 23<strong>+7 (495) 123 45 67</strong></div>
+                  </div>
+                  <div class="menu_footer-sect_info">
+                    <div class="sect-info_header"><b>Режим работы:</b></div>
+                    <div class="sect-info_bottom">
+                      <ul>
+                        <li><strong>пн.-пт.</strong>9:00-21:00</li>
+                        <li><strong>сб.-вс.</strong>10:00-20:00</li>
+                      </ul>
+                      <ul class="social-links">
+                        <li><a href="#"><i class="facebook"></i></a></li>
+                        <li><a href="#"><i class="instagram"></i></a></li>
+                        <li><a href="#"><i class="youtube"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="fx-col-3 desktop-event">
+                <div class="menu_footer-sect">
+                  <div class="menu_footer-sect_info">
+                    <div class="sect-info_header"><b>DOMSMILE</b></div>
+                    <div class="sect-info_bottom">Московская область, город Мытищи,<br>улица Колпакова, микрорайон 17, корпус 23<strong>+7 (495) 123 45 67</strong><a class="btn-smile feed_1" href="#"><i class="icon-smile"></i>Заказать звонок</a></div>
+                  </div>
+                  <div class="menu_footer-sect_info">
+                    <div class="sect-info_header"><b class="text">Режим работы офиса продаж:</b></div>
+                    <div class="sect-info_bottom">
+                      <ul>
+                        <li><strong class="text">пн.-пт.</strong>9:00-21:00</li>
+                        <li><strong class="text">сб.-вс.</strong>10:00-20:00</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="wrap">
+            <div class="footer-bottom_copy"><span>&copy; 2020. DOMSMILE</span></div>
+            <div class="footer-bottom_info smart-event">Любая информация, представленная на данном сайте, носит информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 ГК РФ</div>
+            <div class="footer-bottom_right"><span>Сделано в Design Studio K2D</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-top"><i class="icon-top-arrow"></i></div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
